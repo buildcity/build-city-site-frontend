@@ -14,12 +14,12 @@ const Navbar = () => {
   ];
 
   const navLinks = [
-    { path: '/about', label: 'About' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/blog', label: 'Blog' },
-    { path: '/events', label: 'Events' },
-    { path: '/community', label: 'Community' },
-    { path: '/contact', label: 'Contact' }
+    // { path: '/about', label: 'About' },
+    // { path: '/projects', label: 'Projects' },
+    // { path: '/blog', label: 'Blog' },
+    // { path: '/events', label: 'Events' },
+    { path: '/partners', label: 'Partners' },
+    // { path: '/contact', label: 'Contact' }
   ];
 
   return (
@@ -36,7 +36,7 @@ const Navbar = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <div className="relative group">
                 <button className="px-3 py-2 text-gray-300 hover:text-white">
-                  Cities
+                  New York
                 </button>
                 <div className="absolute z-10 hidden group-hover:block w-48 bg-gray-900 border border-gray-800">
                   {cities.map((city) => (
