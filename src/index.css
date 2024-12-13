@@ -37,3 +37,11 @@ main {
 .text-gray-300 {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+/* Line clamp utility */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -21,10 +21,10 @@ const Home = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
             <a
-              href="/community"
+              href="/partners"
               className="inline-flex items-center px-6 py-3 border border-gray-700 text-base font-medium rounded-md text-gray-300 hover:bg-gray-800 transition-colors duration-200"
             >
-              Join Community
+              View Partners
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </div>

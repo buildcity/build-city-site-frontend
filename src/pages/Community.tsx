@@ -3,7 +3,7 @@ import PartnerCard from '../components/PartnerCard';
 import { fetchPartners } from '../services/api';
 import { Partner } from '../types/Partner';
 
-const Partners = () => {
+const Community = () => {
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -26,7 +26,7 @@ const Partners = () => {
   return (
     <div className="min-h-screen bg-black text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold mb-8 text-center animate-fade-in">Partners</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center animate-fade-in">Community</h1>
         
         {loading && (
           <div className="text-center text-gray-400">
@@ -50,4 +50,4 @@ const Partners = () => {
   );
 };
 
-export default Partners;
+export default Community;
