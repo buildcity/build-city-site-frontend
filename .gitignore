@@ -1,92 +1,55 @@
-# OS-specific files
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Dependency directories
+# Dependencies
 node_modules/
-vendor/
+.pnpm-store/
+
+# Build output
+dist/
+build/
 
 # Environment variables
 .env
 .env.local
-.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.pylintrc
-*.pytest_cache/
-*.coverage
-.coverage.*
-
-# Build artifacts
-build/
-dist/
-*.class
-*.o
-*.so
-*.out
-
-# Package files
-*.gem
-*.jar
-*.war
-*.ear
-*.egg
-*.whl
-
-# IDEs and editors
+# IDE and editor files
 .vscode/
 .idea/
-*.sublime-project
-*.sublime-workspace
-*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# Rust
-/target/
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Go
-bin/
-*.exe
+# System files
+.DS_Store
+Thumbs.db
 
-# Haskell
-dist-newstyle/
-.stack-work/
-cabal.project.local
+# TypeScript cache
+*.tsbuildinfo
 
-# Database
-*.sqlite
-*.db
+# Coverage output
+coverage/
 
-# Generated files
-*.min.*
-*.map
-*.gz
-*.zip
-*.tar
-*.tar.gz
-*.rar
-*.7z
+# Vite
+.vite/
 
-# Images
-*.tiff
-*.tif
-*.jpeg
-*.jpg
-*.png
-*.gif
-*.svg
-*.ico
+# Optional npm cache directory
+.npm
 
-# Others
-*.bak
-*.swp
-*~
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Temporary files
+*.tmp
+*.temp

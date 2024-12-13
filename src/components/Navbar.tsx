@@ -36,7 +36,7 @@ const Navbar = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <div className="relative group">
                 <button className="px-3 py-2 text-gray-300 hover:text-white">
-                  New York
+                  Cities
                 </button>
                 <div className="absolute z-10 hidden group-hover:block w-48 bg-gray-900 border border-gray-800">
                   {cities.map((city) => (
