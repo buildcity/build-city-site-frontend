@@ -13,6 +13,15 @@ const Home = () => {
             Building the future of communities. One city at a time.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center animate-fade-in-delay-2">
+          <a
+              href="https://t.me/+TKDvfZOEs-E3ODQ5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-200"
+            >
+              Join Community
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
             <a
               href="https://lu.ma/user/usr-EI5qHxFqPoGxCJh"
               target="_blank" 
@@ -22,15 +31,7 @@ const Home = () => {
               Join Our Events
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
-            <a
-              href="https://t.me/+TKDvfZOEs-E3ODQ5"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-200"
-            >
-              Join Community
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+
           </div>
         </div>
       </section>
