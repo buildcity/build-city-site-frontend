@@ -5,19 +5,19 @@ const partners = [
   {
     name: 'Celo',
     description: 'Celo is a carbon-negative blockchain platform bringing accessible and affordable decentralized finance (DeFi) to mobile users worldwide.',
-    image: '/public/partner_assets/CeloLogo.jpg',
+    image: '/partner_assets/CeloLogo.jpg',
     link: 'https://celo.org',
   },
   {
     name: 'Venture Miner',
     description: 'VentureMiner integrates Web3 and AI technologies to unlock new possibilities for your business.',
-    image: '/public/partner_assets/Venture_Miner_logo.webp',
+    image: '/partner_assets/Venture_Miner_logo.webp',
     link: 'https://ventureminer.com',
   },
   {
     name: 'Near Protocol',
     description: 'NEAR Protocol is a high-performance, carbon-neutral blockchain platform designed to be fast, secure, and infinitely scalable, enabling developers to build decentralized applications with ease.',
-    image: '/public/partner_assets/near_logo.png',
+    image: '/partner_assets/near_logo.png',
     link: 'https://near.org',
   },
 ];
