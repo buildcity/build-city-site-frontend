@@ -37,17 +37,18 @@ const Home: React.FC = () => {
               Join Our Events
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
-            <button
-              onClick={openModal}
+            <a
+              href="https://substack.com/@buildcity"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors duration-200"
             >
               Subscribe to our Newsletter
               <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
+            </a>
           </div>
         </div>
       </section>
-      <NewsletterModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
