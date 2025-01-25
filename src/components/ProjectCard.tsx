@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 export interface Project {
   id: string;
@@ -11,39 +11,23 @@ export interface Project {
   tags: string[];
 }
 
-interface ProjectCardProps {
-  project: Project;
-}
-
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  return (
-    <div className="bg-gray-900 rounded-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
-      <img
-        src={project.imageUrl}
-        alt={project.title}
+const ProjectCard = ({ project }: { project: Project }) => (
+  <a 
+    href={project.demoUrl} 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="block hover:opacity-90 transition-opacity"
+  >
+    <div className="bg-gray-900 rounded-lg overflow-hidden cursor-pointer">
+      <img 
+        src={project.imageUrl} 
+        alt={project.title} 
         className="w-full h-48 object-cover"
       />
-      <div className="p-6">
-        <div className="flex justify-between items-start">
-          <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-          <div className="flex space-x-3">
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-            <a
-              href={project.demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white"
-            >
-              <ExternalLink className="h-5 w-5" />
-            </a>
-          </div>
+      <div className="p-4">
+        <div className="flex justify-between items-center mb-2">
+          <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+          <Github className="text-gray-400" size={20} />
         </div>
         <p className="text-gray-400 mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2">
@@ -58,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
       </div>
     </div>
-  );
-};
+  </a>
+);
 
 export default ProjectCard;
