@@ -9,5 +9,14 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Wagademy/AI2Web3',
     demoUrl: 'https://www.youtube.com/playlist?list=PLWXOnn4W7PGD-ij_AmzdS1r1hUIz1MXj1',
     tags: ['Education', 'AI', 'Web3']
-  }
+  },
+  {
+    id: '2',
+    title: 'Evrica Technologies Inc.',
+    description: 'All-in-one ecosystem of tools and communities, bridging gaps between web2 to web3.',
+    imageUrl: '/project_assets/evrica-2025.png',
+    githubUrl: 'https://github.com/EvricaTechnologiesInc/',
+    demoUrl: 'https://www.evrica.app',
+    tags: ['Asset Management', 'AI', 'Blockchain', 'Entrepreneurship', 'Web3', 'NFT']
+  },
 ];
