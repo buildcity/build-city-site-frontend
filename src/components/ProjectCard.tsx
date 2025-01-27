@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useState } from 'react';
 import { Github } from 'lucide-react';
 
 export interface Project {
@@ -11,38 +11,73 @@ export interface Project {
   tags: string[];
 }
 
-const ProjectCard = ({ project }: { project: Project }) => (
-  <a 
-    href={project.demoUrl} 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="block hover:opacity-90 transition-opacity"
-  >
-    <div className="bg-gray-900 rounded-lg overflow-hidden cursor-pointer">
-      <img 
-        src={project.imageUrl} 
-        alt={project.title} 
-        className="w-full h-48 object-cover"
-      />
-      <div className="p-4">
-        <div className="flex justify-between items-center mb-2">
-          <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-          <Github className="text-gray-400" size={20} />
+interface ProjectCardProps {
+  project: Project;
+}
+
+const ProjectCard = memo(({ project }: ProjectCardProps) => {
+  const { title, description, imageUrl, demoUrl, githubUrl, tags } = project;
+  const [imageError, setImageError] = useState(false);
+
+  const handleGithubClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
+  return (
+    <a 
+      href={demoUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block"
+    >
+      <article className="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:transform hover:scale-105">
+        <div className="relative aspect-video">
+          <img 
+            src={imageError ? '/fallback-image.png' : imageUrl} 
+            alt={title}
+            loading="lazy"
+            className="w-full h-full object-cover"
+            onError={handleImageError}
+          />
         </div>
-        <p className="text-gray-400 mb-4">{project.description}</p>
-        <div className="flex flex-wrap gap-2">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded"
+
+        <div className="p-4">
+          <div className="flex justify-between items-center mb-2">
+            <h3 className="text-xl font-semibold text-white truncate">{title}</h3>
+            <a 
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors z-10"
+              aria-label={`View ${title} on GitHub`}
+              onClick={handleGithubClick}
             >
-              {tag}
-            </span>
-          ))}
+              <Github size={20} />
+            </a>
+          </div>
+
+          <p className="text-gray-400 mb-4 line-clamp-2">{description}</p>
+
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
-  </a>
-);
+      </article>
+    </a>
+  );
+});
+
+ProjectCard.displayName = 'ProjectCard';
 
 export default ProjectCard;
