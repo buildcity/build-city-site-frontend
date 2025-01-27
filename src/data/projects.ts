@@ -14,7 +14,7 @@ export const projects: Project[] = [
     id: '2',
     title: 'Evrica Technologies Inc.',
     description: 'All-in-one ecosystem of tools and communities, bridging gaps between web2 to web3.',
-    imageUrl: '/project_assets/evrica-2025.png',
+    imageUrl: '/project_assets/evrica_app_img.jpg',
     githubUrl: 'https://github.com/EvricaTechnologiesInc/',
     demoUrl: 'https://www.evrica.app',
     tags: ['Asset Management', 'AI', 'Blockchain', 'Entrepreneurship', 'Web3', 'NFT']
