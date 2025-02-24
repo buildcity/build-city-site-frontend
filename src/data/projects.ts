@@ -19,4 +19,31 @@ export const projects: Project[] = [
     demoUrl: 'https://www.evrica.app',
     tags: ['Asset Management', 'AI', 'Blockchain', 'Entrepreneurship', 'Web3', 'NFT']
   },
+  {
+    "id": "3",
+    "title": "Ambient Commerce",
+    "description": "Agent-to-Agent Commerce, Onchain. Experience live negotiations between buyer and seller agents, leading to automated on-chain transactions.",
+    "imageUrl": "https://pbs.twimg.com/profile_images/1893128410257293312/W9c0ZRrc_400x400.jpg",
+    "githubUrl": "https://x.com/ambientcommerce",
+    "demoUrl": "https://www.ambientcommerce.fun/",
+    "tags": ["E-commerce", "Blockchain", "Automation", "AI", "Web3"]
+  },
+  {
+    "id": "4",
+    "title": "Byte_AI",
+    "description": "The first fully autonomous Delivery Agent in the world",
+    "imageUrl": "https://pbs.twimg.com/profile_images/1869624181366915072/VfivRpYm_400x400.png",
+    "githubUrl": "https://x.com/Byte__AI",
+    "demoUrl": "https://app.virtuals.io/virtuals/191321",
+    "tags": ["Blockchain", "Automation", "AI", "Web3", "Delivery"]
+  },
+  {
+    "id": "5",
+    "title": "Lynkable",
+    "description": "A hybrid community platform that connects local event organizers, artists, and small businesses to strengthen community events.",
+    "imageUrl": "/project_assets/lynkable-logo.avif",
+    "githubUrl": "https://github.com/buildcity/lynkable-project",
+    "demoUrl": "https://github.com/buildcity/lynkable-project",
+    "tags": ["Community", "Events", "Local Business", "Social Platform"]
+  },
 ];
