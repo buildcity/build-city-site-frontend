@@ -34,7 +34,7 @@ export const projects: Project[] = [
     "description": "The first fully autonomous Delivery Agent in the world",
     "imageUrl": "https://pbs.twimg.com/profile_images/1869624181366915072/VfivRpYm_400x400.png",
     "githubUrl": "https://x.com/Byte__AI",
-    "demoUrl": "https://app.virtuals.io/virtuals/191321",
+    "demoUrl": "https://www.tryabyte.xyz/",
     "tags": ["Blockchain", "Automation", "AI", "Web3", "Delivery"]
   },
   {
