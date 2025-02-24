@@ -43,7 +43,7 @@ export const projects: Project[] = [
     "description": "A hybrid community platform that connects local event organizers, artists, and small businesses to strengthen community events.",
     "imageUrl": "/project_assets/lynkable-logo.avif",
     "githubUrl": "https://github.com/buildcity/lynkable-project",
-    "demoUrl": "https://github.com/buildcity/lynkable-project",
+    "demoUrl": "https://lynkable.netlify.app/",
     "tags": ["Community", "Events", "Local Business", "Social Platform"]
   },
 ];
