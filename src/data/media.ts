@@ -14,7 +14,7 @@ export const mediaItems: Media[] = [
     id: '2',
     title: 'Founders talk w/ Byte Ai',
     description: 'A casual conversation with a Build City Founder',
-    imageUrl: '/media_assets/Buildcityxbyteai.png',
+    imageUrl: '/media_assets/buildcitybyte.png',
     url: 'https://x.com/i/spaces/1dRJZYzdZzMGB',
     type: 'twitter',
     tags: ['twitterspaces', 'ByteAI', 'AIAgents', 'Entrepreneurship', 'FoodTech']
