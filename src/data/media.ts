@@ -1,6 +1,6 @@
 import { Media } from '../components/MediaCard';
 
-export const projects: Media[] = [
+export const mediaItems: Media[] = [
   {
     id: '1',
     title: 'AI2Web3Bootcamp NYC',
