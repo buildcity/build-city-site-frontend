@@ -19,9 +19,9 @@ const Navbar = () => {
     { path: '/projects', label: 'Projects' },
     // { path: '/blog', label: 'Blog' },
     // { path: '/events', label: 'Events' },
+    {path: '/media', label: 'Media'},
     { path: '/partners', label: 'Partners' },
     // { path: '/contact', label: 'Contact' }
-    {path: '/media', label: 'Media'}
   ];
 
   return (
