@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const cities = [
-    { name: 'New York City', active: true },
-    { name: 'San Francisco', active: false },
-    { name: 'London', active: false },
-    { name: 'Singapore', active: false },
-    { name: 'Dubai', active: false }
+    { name: 'New York City', active: true,},
+    { name: 'Buffalo', active: true },
+    { name: 'Yonkers', active: true },
+   // { name: 'Singapore', active: false },
+    //{ name: 'Dubai', active: false }
   ];
 
   const navLinks = [
@@ -20,6 +21,7 @@ const Navbar = () => {
     // { path: '/events', label: 'Events' },
     { path: '/partners', label: 'Partners' },
     // { path: '/contact', label: 'Contact' }
+    {path: '/media', label: 'Media'}
   ];
 
   return (
@@ -36,7 +38,7 @@ const Navbar = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <div className="relative group">
                 <button className="px-3 py-2 text-gray-300 hover:text-white">
-                  New York
+                  Cities
                 </button>
                 <div className="absolute z-10 hidden group-hover:block w-48 bg-gray-900 border border-gray-800">
                   {cities.map((city) => (

@@ -4,10 +4,10 @@ export const mediaItems: Media[] = [
   {
     id: '1',
     title: 'AI2Web3Bootcamp NYC',
-    description: 'Our content across platforms',
+    description: 'Introduction to decentralized AI agents development.',
     imageUrl: '/project_assets/ai2web3bootcamp_banner.png',
-    url: 'https://github.com/Wagademy/AI2Web3',
-    type: 'twitter',
+    url: 'https://youtube.com/playlist?list=PLWXOnn4W7PGD-ij_AmzdS1r1hUIz1MXj1&si=g0GUZdUdxgHlfGiG',
+    type: 'bootcamp',
     tags: ['Education', 'AI', 'Web3']
   },
   {

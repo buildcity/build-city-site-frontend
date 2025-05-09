@@ -6,16 +6,16 @@ export interface Media {
   description: string;
   imageUrl: string;
   url: string;
-  type: "article" | "twitter" | "video" | "workshop";
+  type: "article" | "twitter" | "video" | "workshop" | "bootcamp";
   tags: string[];
 }
 
 interface MediaCardProps {
-  project: Media;
+  media: Media;
 }
 
-const MediaCard = memo(({ project }: MediaCardProps) => {
-  const { title, description, imageUrl, url, type, tags } = project;
+const MediaCard = memo(({ media }: MediaCardProps) => {
+  const { title, description, imageUrl, url, type, tags } = media;
   const [imageError, setImageError] = useState(false);
 
   
@@ -33,13 +33,15 @@ const MediaCard = memo(({ project }: MediaCardProps) => {
     >
       <article className="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:transform hover:scale-105">
         <div className="relative aspect-video">
-          <img 
-            src={imageError ? '/fallback-image.png' : imageUrl} 
-            alt={title}
-            loading="lazy"
-            className="w-full h-full object-cover"
-            onError={handleImageError}
-          />
+            <div className="relative h-30 w-full">
+             <img
+                  src={imageError ? '/fallback-image.png' : imageUrl}
+                  alt={title}
+                 className="w-full h-full object-cover object-center"
+                  onError={handleImageError}
+                />
+
+            </div>
         </div>
 
         <div className="p-4">

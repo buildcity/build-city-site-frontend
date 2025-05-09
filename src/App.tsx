@@ -9,6 +9,7 @@ const Events = lazy(() => import('./pages/Events'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Projects = lazy(() => import('./pages/Projects'));
+const Media = lazy(() => import('./pages/Media'));
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/partners" element={<Partners />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/media" element={<Media />} />
           </Routes>
         </Suspense>
       </Layout>
