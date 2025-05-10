@@ -1,0 +1,1 @@
+import{j as t}from"./index-CicmTBb0.js";const a=()=>t.jsx("div",{className:"min-h-screen bg-black text-white py-20",children:t.jsx("div",{className:"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8",children:t.jsx("h1",{className:"text-4xl font-bold mb-8 text-center animate-fade-in",children:"Contact"})})});export{a as default};
