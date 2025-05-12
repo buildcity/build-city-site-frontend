@@ -25,10 +25,13 @@ const MediaCard = memo(({ media }: MediaCardProps) => {
   // 👇 Apply a taller height only for the Byte Ai card
   const imageWrapperClass =
   id === '2'
-  ? 'relative h-[450px] w-full'
-  : id === '1'
-  ? 'relative h-[450px] w-[410px]'
-  : 'relative aspect-video';
+    ? 'relative h-[450px] w-full'
+    : id === '1'
+    ? 'relative h-[450px] w-[410px]'
+    : id === '3'
+    ? 'relative h-[450px] w-[400px]'
+    : 'relative aspect-video';
+  
 // default height
 
     
