@@ -43,7 +43,7 @@ export const mediaItems: Media[] = [
     description: 'We work with Yonkers Arts to create personalized social agents',
     imageUrl: '/media_assets/yonkers arts image for site.png',
     url: 'https://x.com/i/spaces/1BdxYqgYkELxX',
-    type: 'video',
+    type: 'youtube',
     tags: ['AIForCreatives', 'YonkersArts', 'AIForCreatives']
   },
  // {

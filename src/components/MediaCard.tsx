@@ -6,7 +6,7 @@ export interface Media {
   description: string;
   imageUrl: string;
   url: string;
-  type: "article" | "twitter" | "video" | "workshop" | "bootcamp";
+  type: "article" | "twitter" | "youtube" | "workshop" | "bootcamp";
   tags: string[];
 }
 
