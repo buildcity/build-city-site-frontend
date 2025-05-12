@@ -19,6 +19,24 @@ export const mediaItems: Media[] = [
     type: 'twitter',
     tags: ['twitterspaces', 'ByteAI', 'AIAgents', 'Entrepreneurship', 'FoodTech']
   },
+  {
+    id: '3',
+    title: 'Coindesk article on Build City Ai2Web3 Bootcamp',
+    description: 'The combination of AI and Web3 could turn us all into developers',
+    imageUrl: '/media_assets/Coindeskarticleimage.png',
+    url: 'https://www.coindesk.com/opinion/2025/01/24/it-s-easier-than-you-think-to-build-with-ai-and-web3',
+    type: 'article',
+    tags: ['AI2Web3', 'CoinDesk', 'Web3Education']
+  },
+  {
+    id: '4',
+    title: 'A casual conversation on Vibe Coding ',
+    description: 'Vibe Coding trends with CryptoFede',
+    imageUrl: '/media_assets/casual conversation on vibe coding.png',
+    url: 'https://x.com/i/spaces/1BdxYqgYkELxX',
+    type: 'twitter',
+    tags: ['VibeCoding', 'CryptoFede', 'BuildCityTalks']
+  },
  // {
     //"id": "3",
    // "title": "Ambient Commerce",
