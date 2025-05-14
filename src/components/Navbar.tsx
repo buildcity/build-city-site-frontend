@@ -29,9 +29,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-gray-200 hover:text-white">
-              BUILDCITY
-            </Link>
+          <Link to="/" className="flex items-center">
+             <img
+               src="/buildcitylogo_assets/buildcitylogo.png" 
+               alt="Build City Logo"
+                className="h-35 w-40"          
+              />
+          </Link>
           </div>
 
           <div className="hidden md:block">
