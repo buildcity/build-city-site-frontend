@@ -131,20 +131,56 @@ export const projects: Project[] = [
   },
   {
     id: '14',
-    title: '',
-    description: '',
-    imageUrl: '',
-    githubUrl: '',
-    demoUrl: '',
-    tags: []
+    title: 'Consulti',
+    description: 'AI-powered consultant agent designed to help businesses and startups develop comprehensive financial plans. ',
+    imageUrl: 'https://avatars.githubusercontent.com/u/88513210?v=4',
+    githubUrl: 'https://github.com/ahashem12',
+    demoUrl: 'https://vimeo.com/1057151731/f7989f5892?share=copy',
+    tags: ['AI','Consulting', 'Finance', 'Web3', 'Business', 'Startups']
   },
   {
     id: '15',
-    title: '',
-    description: '',
-    imageUrl: '',
-    githubUrl: '',
-    demoUrl: '',
-    tags: []
+    title: 'Web3ify',
+    description: 'Automates the process of converting traditional web projects into Web3-enabled applications using AI.',
+    imageUrl: 'https://avatars.githubusercontent.com/u/74101409?s=48&v=4',
+    githubUrl: 'https://github.com/Mhusseini-dev/Web3ify',
+    demoUrl: 'https://www.canva.com/design/DAGe1DWKQ1A/kX4d8oOYQkQ52lJkGGQDXA/edit',
+    tags: ['AI', 'Web3', 'Automation']
+  },
+  {
+    id: '16',
+    title: 'Impactivism',
+    description: 'a decentralized platform designed to help communities create, share, and sell NFTs',
+    imageUrl: 'https://avatars.githubusercontent.com/u/125412085?v=4',
+    githubUrl: 'https://github.com/Wagademy/agent-camp/discussions/18',
+    demoUrl: 'https://shorturl.at/AEphi',
+    tags: ['NFTs', 'Community', 'Decentralization']
+  },
+  {
+    id: '17',
+    title: 'Syna',
+    description: 'Your second friend that will help you communicate with your deaf friend, which uses AI to translate sign language that is enhanced by decentralized Web3 technologies for smooth communication in both English and Arabic languages.',
+    imageUrl: 'https://images.unsplash.com/photo-1491414416654-c4de0c986af8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    githubUrl: 'https://github.com/Amalziad1', 
+    demoUrl: 'https://drive.google.com/file/d/157jMsR7vdJrcF7nXhYpvFkCz_aBYgt_5/view?usp=sharing',
+    tags: ['AI', 'Web3', 'Sign Language', 'Communication', 'Blockchain']
+  },
+    {
+    id: '18',
+    title: 'COFO.AI',
+    description: 'COFO.AI provides intelligent operational and financial guidance for businesses under $10M in ARR, helping you scale efficiently and make data-driven decisions.',
+    imageUrl: 'https://images.unsplash.com/photo-1668930185267-1f3c19851b5b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    githubUrl: 'https://github.com/ravejedii/cofo-ai',
+    demoUrl: 'https://v0.dev/chat/red-door-test-roadmap-ALfti1UZAeA',
+    tags: ['AI', 'Web3', 'Sign Language', 'Communication', 'Blockchain']
+  },
+  {
+    id: '19',
+    title: 'User-Interface Assistant',
+    description: 'A computer-vision based browsing agent that assists a user in navigating through complex software user interfaces.',
+    imageUrl: 'https://plus.unsplash.com/premium_photo-1734348389942-a826bc4127cf?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    githubUrl: 'https://github.com/VimalVasu',
+    demoUrl: 'https://v0.dev/chat/computer-vision-assistant-i1DykadwU99',
+    tags: ['AI', 'Web3', 'User Interface']
   }
 ];
