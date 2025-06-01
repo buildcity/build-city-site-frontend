@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Twitter, MessageCircle, Calendar, Youtube, Instagram } from 'lucide-react';
+import { Github, Twitter, MessageCircle, Calendar, Youtube, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -48,6 +48,14 @@ const Footer = () => {
               className="transform hover:scale-110 transition-transform duration-200"
             >
               <Youtube className="h-6 w-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/buildcity/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform hover:scale-110 transition-transform duration-200"
+            >
+              <Linkedin className="h-6 w-6" />
             </a>
             <a
               href="https://lu.ma/buildcity"
