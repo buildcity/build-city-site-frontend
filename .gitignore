@@ -76,15 +76,7 @@ cabal.project.local
 *.rar
 *.7z
 
-# Images
-*.tiff
-*.tif
-*.jpeg
-*.jpg
-*.png
-*.gif
-*.svg
-*.ico
+
 
 # Others
 *.bak
