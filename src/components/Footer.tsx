@@ -3,14 +3,14 @@ import { Github, Twitter, MessageCircle, Calendar, Youtube, Instagram } from 'lu
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8 ">
+    <footer className="bg-black text-white py-8 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0 flex flex-col items-center md:items-start leading-none">
   <img
-    src="/buildcitylogo_assets/buildcitylogo.png" 
+    src="/buildcitylogo_assets/buildcitylogoadjust.png" 
     alt="Build City Logo"
-    className="h-40 w-35 mt-.5"
+    className="h-5"
   />
 
 </div>
