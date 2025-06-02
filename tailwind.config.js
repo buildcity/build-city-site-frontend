@@ -43,7 +43,35 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out forwards',
+        'fade-in-delay': 'fadeIn 0.6s ease-out 0.3s forwards',
+        'fade-in-delay-2': 'fadeIn 0.6s ease-out 0.6s forwards',
+        'slide-in-left': 'slideInLeft 0.5s ease-out forwards',
+      },
+      keyframes: {
+        fadeIn: {
+          from: {
+            opacity: '0',
+            transform: 'translateY(20px)',
+          },
+          to: {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+        slideInLeft: {
+          from: {
+            opacity: '0',
+            transform: 'translateX(-100%)',
+          },
+          to: {
+            opacity: '1',
+            transform: 'translateX(0)',
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 };

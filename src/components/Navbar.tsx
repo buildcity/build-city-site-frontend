@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { componentStyles } from '../lib/styles';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +58,7 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="px-3 py-2 text-gray-300 hover:text-white text-sm font-medium"
+                  className={componentStyles.navLink}
                 >
                   {link.label}
                 </Link>
@@ -83,7 +84,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="block px-3 py-2 text-gray-300 hover:text-white text-base font-medium"
+                className={componentStyles.navLink}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

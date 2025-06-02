@@ -1,4 +1,5 @@
-import React, { memo, useState } from 'react';
+import { memo, useState } from 'react';
+import { componentStyles } from '../lib/styles';
 
 export interface Media {
   id: string;
@@ -8,6 +9,9 @@ export interface Media {
   url: string;
   type: "article" | "twitter" | "youtube" | "workshop" | "bootcamp";
   tags: string[];
+  twitterSpacesId?: string;
+  youtubeVideoId?: string;
+  articlePreview?: string;
 }
 
 interface MediaCardProps {
@@ -43,7 +47,7 @@ const MediaCard = memo(({ media }: MediaCardProps) => {
       rel="noopener noreferrer"
       className="block"
     >
-      <article className="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:transform hover:scale-105">
+      <article className={componentStyles.mediaCard}>
         <div className={imageWrapperClass}>
           <img
             src={imageError ? '/fallback-image.png' : imageUrl}
