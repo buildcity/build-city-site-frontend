@@ -1,4 +1,5 @@
-import { Github, Twitter, MessageCircle, Calendar, Youtube, Instagram } from 'lucide-react';
+import React from 'react';
+import { Github, Twitter, MessageCircle, Calendar, Youtube, Instagram, Linkedin } from 'lucide-react';
 import { componentStyles } from '../lib/styles';
 
 const Footer = () => {
@@ -64,6 +65,14 @@ const Footer = () => {
               className={componentStyles.socialIcon}
             >
               <Instagram className="h-6 w-6" />
+            </a>
+            <a
+              href="https://linkedin.com/company/buildcity"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={componentStyles.socialIcon}
+            >
+              <Linkedin className="h-6 w-6" />
             </a>
           </div>
         </div>
