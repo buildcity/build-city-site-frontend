@@ -1,6 +1,6 @@
-import React from 'react';
 import { format } from 'date-fns';
 import { ExternalLink } from 'lucide-react';
+import { componentStyles } from '../lib/styles';
 
 export interface BlogPost {
   id: string;
@@ -25,7 +25,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
       href={post.mediumUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="block bg-gray-900 rounded-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105"
+      className={componentStyles.blogCard}
     >
       <div className="p-6">
         <div className="flex items-center mb-4">
@@ -50,7 +50,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           {post.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded"
+              className={componentStyles.tag}
             >
               {tag}
             </span>

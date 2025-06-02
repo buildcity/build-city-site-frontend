@@ -1,5 +1,7 @@
 import React from 'react';
 import { Github, Twitter, MessageCircle, Calendar, Youtube, Instagram, Linkedin } from 'lucide-react';
+import { componentStyles } from '../lib/styles';
+
 
 const Footer = () => {
   return (
@@ -21,7 +23,7 @@ const Footer = () => {
               href="https://github.com/buildcity"
               target="_blank"
               rel="noopener noreferrer"
-              className="transform hover:scale-110 transition-transform duration-200"
+              className={componentStyles.socialIcon}
             >
               <Github className="h-6 w-6" />
             </a>
@@ -29,7 +31,7 @@ const Footer = () => {
               href="https://x.com/buidlcity"
               target="_blank"
               rel="noopener noreferrer"
-              className="transform hover:scale-110 transition-transform duration-200"
+              className={componentStyles.socialIcon}
             >
               <Twitter className="h-6 w-6" />
             </a>
@@ -37,7 +39,7 @@ const Footer = () => {
               href="https://t.me/buildcity"
               target="_blank"
               rel="noopener noreferrer"
-              className="transform hover:scale-110 transition-transform duration-200"
+              className={componentStyles.socialIcon}
             >
               <MessageCircle className="h-6 w-6" />
             </a>
@@ -45,7 +47,7 @@ const Footer = () => {
               href="https://www.youtube.com/@buidlcity"
               target="_blank"
               rel="noopener noreferrer"
-              className="transform hover:scale-110 transition-transform duration-200"
+              className={componentStyles.socialIcon}
             >
               <Youtube className="h-6 w-6" />
             </a>
@@ -61,7 +63,7 @@ const Footer = () => {
               href="https://lu.ma/buildcity"
               target="_blank"
               rel="noopener noreferrer"
-              className="transform hover:scale-110 transition-transform duration-200"
+              className={componentStyles.socialIcon}
             >
               <Calendar className="h-6 w-6" />
             </a>
@@ -69,9 +71,17 @@ const Footer = () => {
               href="https://www.instagram.com/build__city?igsh=NHI1YnVrbDV5cGp6"
               target="_blank"
               rel="noopener noreferrer"
-              className="transform hover:scale-110 transition-transform duration-200"
+              className={componentStyles.socialIcon}
             >
               <Instagram className="h-6 w-6" />
+            </a>
+            <a
+              href="https://linkedin.com/company/buildcity"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={componentStyles.socialIcon}
+            >
+              <Linkedin className="h-6 w-6" />
             </a>
           </div>
         </div>

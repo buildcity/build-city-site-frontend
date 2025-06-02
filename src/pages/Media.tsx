@@ -1,19 +1,35 @@
-import React from 'react';
-import MediaCard from '../components/MediaCard';
+import { useState } from 'react';
+import ExpandableMediaCard from '../components/ExpandableMediaCard';
 import { mediaItems } from '../data/media';
+import { PageLayout, PageTitle } from '../components/PageLayout';
+import { CardGrid } from '../components/Card';
 
 const Media = () => {
+  const [expandedCardId, setExpandedCardId] = useState<string | null>(null);
+
+  const handleExpand = (id: string) => {
+    setExpandedCardId(id);
+  };
+
+  const handleClose = () => {
+    setExpandedCardId(null);
+  };
+
   return (
-    <div className="min-h-screen bg-black text-white py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold mb-8 text-center animate-fade-in">Media</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in-delay">
-          {mediaItems.map((media) => (
-            <MediaCard key={media.id} media={media} />
-          ))}
-        </div>
-      </div>
-    </div>
+    <PageLayout>
+      <PageTitle>Media</PageTitle>
+      <CardGrid>
+        {mediaItems.map((media) => (
+          <ExpandableMediaCard 
+            key={media.id} 
+            media={media} 
+            isExpanded={expandedCardId === media.id}
+            onExpand={handleExpand}
+            onClose={handleClose}
+          />
+        ))}
+      </CardGrid>
+    </PageLayout>
   );
 };
 

@@ -1,4 +1,6 @@
-import React from "react";
+import { useState } from "react";
+import { PageLayout, PageTitle } from "../components/PageLayout";
+import { Card, CardGrid } from "../components/Card";
 
 const partners = [
   {
@@ -24,47 +26,38 @@ const partners = [
   },
 ];
 
-const Partners: React.FC = () => {
+const Partners = () => {
   return (
-    <div className="min-h-screen bg-black text-white py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold mb-12 text-center animate-fade-in">Partners</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 animate-fade-in-delay">
-          {partners.map((partner) => {
-            const [imageSrc, setImageSrc] = React.useState(partner.image);
+    <PageLayout narrow>
+      <PageTitle>Partners</PageTitle>
+      <CardGrid>
+        {partners.map((partner) => {
+          const [imageSrc, setImageSrc] = useState(partner.image);
 
-            return (
-              <div
-                key={partner.name}
-                className="bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105"
-              >
-                <img
-                  src={imageSrc}
-                  alt={`Logo of ${partner.name}`}
-                  className="w-full h-32 object-contain rounded-t"
-                  onError={() => {
-                    setImageSrc("/dist/partner_assets/fallback.png");
-                    console.error(`Failed to load image: ${partner.image}`);
-                  }}
-                />
-                <div className="mt-4">
-                  <h2 className="text-xl font-semibold">{partner.name}</h2>
-                  <p className="text-gray-300 mt-2">{partner.description}</p>
-                  <a
-                    href={partner.link || "#"}
-                    className="text-blue-400 hover:underline mt-3 inline-block"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Visit {partner.name}
-                  </a>
-                </div>
+          return (
+            <Card
+              key={partner.name}
+              interactive
+              href={partner.link}
+            >
+              <img
+                src={imageSrc}
+                alt={`Logo of ${partner.name}`}
+                className="w-full h-32 object-contain rounded-t"
+                onError={() => {
+                  setImageSrc("/dist/partner_assets/fallback.png");
+                  console.error(`Failed to load image: ${partner.image}`);
+                }}
+              />
+              <div className="mt-4">
+                <h2 className="text-xl font-semibold">{partner.name}</h2>
+                <p className="text-gray-300 mt-2">{partner.description}</p>
               </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
+            </Card>
+          );
+        })}
+      </CardGrid>
+    </PageLayout>
   );
 };
 
