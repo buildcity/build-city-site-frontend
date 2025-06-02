@@ -2,6 +2,7 @@ import React from 'react';
 import { Github, Twitter, MessageCircle, Calendar, Youtube, Instagram, Linkedin } from 'lucide-react';
 import { componentStyles } from '../lib/styles';
 
+
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-8 pb-10">
@@ -49,6 +50,14 @@ const Footer = () => {
               className={componentStyles.socialIcon}
             >
               <Youtube className="h-6 w-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/buildcity/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform hover:scale-110 transition-transform duration-200"
+            >
+              <Linkedin className="h-6 w-6" />
             </a>
             <a
               href="https://lu.ma/buildcity"
