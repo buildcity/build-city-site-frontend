@@ -55,7 +55,7 @@ const Footer = () => {
               href="https://www.linkedin.com/company/buildcity/"
               target="_blank"
               rel="noopener noreferrer"
-              className="transform hover:scale-110 transition-transform duration-200"
+              className={componentStyles.socialIcon}
             >
               <Linkedin className="h-6 w-6" />
             </a>
@@ -74,14 +74,6 @@ const Footer = () => {
               className={componentStyles.socialIcon}
             >
               <Instagram className="h-6 w-6" />
-            </a>
-            <a
-              href="https://linkedin.com/company/buildcity"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={componentStyles.socialIcon}
-            >
-              <Linkedin className="h-6 w-6" />
             </a>
           </div>
         </div>
