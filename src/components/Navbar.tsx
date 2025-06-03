@@ -18,7 +18,7 @@ const Navbar = () => {
     { path: '/labs', label: 'Labs' },
     { path: '/media', label: 'Media' },
     { path: '/partners', label: 'Partners' },
-    { path: '/membership', label: 'Membership' }, // 👈 Added
+    { path: '/membership', label: 'Membership' },
   ];
 
   return (
@@ -78,19 +78,45 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Horizontal Scrollable Menu */}
       {isOpen && (
-        <div className="md:hidden border-t border-gray-800">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={componentStyles.navLink}
-                onClick={() => setIsOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+        <div className="md:hidden border-t border-gray-800 bg-black">
+          <div className="flex overflow-x-auto scrollbar-horizontal px-4 py-3 space-x-4">
+            <div className="flex items-center space-x-4 whitespace-nowrap">
+              {/* Cities section */}
+              <div className="flex items-center space-x-2">
+                <span className="text-xs text-gray-400 uppercase tracking-wide flex-shrink-0">Cities:</span>
+                {cities.map((city) => (
+                  <a
+                    key={city.name}
+                    href="#"
+                    className={`px-3 py-1 text-sm rounded ${
+                      city.active 
+                        ? 'bg-gray-700 text-gray-200' 
+                        : 'bg-gray-800 text-gray-400'
+                    } hover:bg-gray-600 transition-colors flex-shrink-0`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {city.name}
+                  </a>
+                ))}
+              </div>
+              
+              {/* Separator */}
+              <div className="h-6 w-px bg-gray-600 flex-shrink-0"></div>
+              
+              {/* Navigation links */}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors flex-shrink-0 whitespace-nowrap"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       )}

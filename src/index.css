@@ -37,3 +37,53 @@ main {
 .text-gray-300 {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+/* Custom scrollbar styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(75 85 99) rgb(31 41 55);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgb(31 41 55);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgb(75 85 99);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgb(107 114 128);
+}
+
+/* For horizontal scrolling on mobile */
+.scrollbar-horizontal {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(75 85 99) rgb(31 41 55);
+}
+
+.scrollbar-horizontal::-webkit-scrollbar {
+  height: 4px;
+}
+
+.scrollbar-horizontal::-webkit-scrollbar-track {
+  background: rgb(31 41 55);
+  border-radius: 2px;
+}
+
+.scrollbar-horizontal::-webkit-scrollbar-thumb {
+  background: rgb(75 85 99);
+  border-radius: 2px;
+}
+
+.scrollbar-horizontal::-webkit-scrollbar-thumb:hover {
+  background: rgb(107 114 128);
+}
