@@ -1,1 +1,0 @@
-import{j as t}from"./index-yD1J_GPC.js";import{P as a,a as o}from"./PageLayout-G3F-PtqE.js";import"./animations-CFpQmy1Z.js";const i=()=>t.jsx(a,{children:t.jsx(o,{children:"Contact"})});export{i as default};

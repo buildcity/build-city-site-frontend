@@ -1,43 +1,47 @@
-import React from 'react';
 import CTAButton from '../components/CTAButton';
 import { fadeInClasses } from '../lib/animations';
 
-const Home: React.FC = () => {
+// External links constants
+const EXTERNAL_LINKS = {
+  telegram: "https://t.me/+TKDvfZOEs-E3ODQ5",
+  events: "https://lu.ma/user/usr-EI5qHxFqPoGxCJh",
+  newsletter: "https://substack.com/@buildcity"
+} as const;
+
+const Home = () => {
   return (
-    <>
-      <div className="min-h-screen">
-        <section className="relative h-screen flex items-center justify-center bg-black bg-opacity-90">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className={`text-4xl md:text-6xl font-black text-white mb-6 ${fadeInClasses.base}`}>
-              Welcome to <span className="text-gray-400">BUILDCITY</span>
-            </h1>
-            <p className={`text-xl md:text-2xl text-gray-500 mb-8 ${fadeInClasses.delay}`}>
-              Building the future of communities. One city at a time.
-            </p>
-            <div className={`flex flex-col md:flex-row gap-4 justify-center ${fadeInClasses.delay2}`}>
-              <CTAButton 
-                href="https://t.me/+TKDvfZOEs-E3ODQ5" 
-                variant="primary"
-              >
-                Join Community
-              </CTAButton>
-              <CTAButton 
-                href="https://lu.ma/user/usr-EI5qHxFqPoGxCJh" 
-                variant="secondary"
-              >
-                Join Our Events
-              </CTAButton>
-              <CTAButton 
-                href="https://substack.com/@buildcity" 
-                variant="accent"
-              >
-                Subscribe to our Newsletter
-              </CTAButton>
-            </div>
+    <div className="min-h-screen">
+      <section className="relative h-screen flex items-center justify-center bg-black bg-opacity-90">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className={`text-4xl md:text-6xl font-black text-white mb-6 ${fadeInClasses.base}`}>
+            Welcome to <span className="text-gray-400">BUILDCITY</span>
+          </h1>
+          <p className={`text-xl md:text-2xl text-gray-500 mb-8 ${fadeInClasses.delay}`}>
+            Building the future of communities. One city at a time.
+          </p>
+          <div className={`flex flex-col md:flex-row gap-4 justify-center ${fadeInClasses.delay2}`}>
+            <CTAButton 
+              href={EXTERNAL_LINKS.telegram} 
+              variant="primary"
+            >
+              Join Community
+            </CTAButton>
+            <CTAButton 
+              href={EXTERNAL_LINKS.events} 
+              variant="secondary"
+            >
+              Join Our Events
+            </CTAButton>
+            <CTAButton 
+              href={EXTERNAL_LINKS.newsletter} 
+              variant="accent"
+            >
+              Subscribe to our Newsletter
+            </CTAButton>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 };
 

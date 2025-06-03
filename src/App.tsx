@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 
@@ -11,6 +11,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Media = lazy(() => import('./pages/Media'));
 const Membership = lazy(() => import('./pages/Membership')); // 👈 added this line
+const Labs = lazy(() => import('./pages/Labs'));
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/media" element={<Media />} />
-            <Route path="/membership" element={<Membership />} /> {/* 👈 new route */}
+            <Route path="/membership" element={<Membership />} /> {/* 👈 new route */
+            <Route path="/labs" element={<Labs />} />}
           </Routes>
         </Suspense>
       </Layout>
