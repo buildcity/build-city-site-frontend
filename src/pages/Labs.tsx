@@ -89,46 +89,46 @@ const Labs = () => {
     <PageLayout>
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
-        <div className="relative py-20 px-4">
+        <div className="relative py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <Beaker className="h-16 w-16 text-gray-400" />
+            <div className="flex justify-center mb-4 sm:mb-6">
+              <Beaker className="h-12 w-12 sm:h-16 sm:w-16 text-gray-400" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-black mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 sm:mb-6">
               <span className="text-gray-400">BuildCity</span> <span className="text-white">Labs</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-500 mb-8">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-500 mb-6 sm:mb-8 px-4">
               Where innovation meets experimentation.
             </p>
-            <Button className="bg-white hover:bg-gray-200 text-black px-8 py-3 text-lg">
+            <Button className="bg-white hover:bg-gray-200 text-black px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg">
               Join Our Research
             </Button>
           </div>
         </div>
 
         {/* Mission Section */}
-        <div className="py-16 px-4 bg-gray-900/50">
+        <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Mission</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Our Mission</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               <div className="text-center">
-                <Code className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Research & Development</h3>
-                <p className="text-gray-300">
+                <Code className="h-10 w-10 sm:h-12 sm:w-12 text-gray-400 mx-auto mb-3 sm:mb-4" />
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">Research & Development</h3>
+                <p className="text-gray-300 text-sm sm:text-base">
                   Exploring emerging technologies and developing proof-of-concepts for next-generation community solutions.
                 </p>
               </div>
               <div className="text-center">
-                <Users className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Collaborative Innovation</h3>
-                <p className="text-gray-300">
+                <Users className="h-10 w-10 sm:h-12 sm:w-12 text-gray-400 mx-auto mb-3 sm:mb-4" />
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">Collaborative Innovation</h3>
+                <p className="text-gray-300 text-sm sm:text-base">
                   Bringing together developers, researchers, and visionaries to tackle complex challenges together.
                 </p>
               </div>
               <div className="text-center">
-                <Rocket className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Open Source Impact</h3>
-                <p className="text-gray-300">
+                <Rocket className="h-10 w-10 sm:h-12 sm:w-12 text-gray-400 mx-auto mb-3 sm:mb-4" />
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">Open Source Impact</h3>
+                <p className="text-gray-300 text-sm sm:text-base">
                   Contributing to the broader community ecosystem through open-source projects and knowledge sharing.
                 </p>
               </div>
@@ -137,10 +137,10 @@ const Labs = () => {
         </div>
 
         {/* Active Projects */}
-        <div className="py-16 px-4">
+        <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Active Lab Projects</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Active Lab Projects</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               {labProjects.map((project, index) => {
                 const colors = getProjectColors(index);
                 return (

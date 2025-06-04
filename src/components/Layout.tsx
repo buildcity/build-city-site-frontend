@@ -32,7 +32,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col font-mono bg-black text-white">
+    <div className="min-h-screen flex flex-col font-mono bg-black text-white mobile-safe">
       <MatrixRain />
       <Navbar />
       <main className="flex-grow">{children}</main>
