@@ -21,7 +21,7 @@ export default function MembershipTierCard({ tier }: MembershipTierProps) {
     const tiers = [
       {
         name: "Starter Community",
-        features: ["Community Access", "Basic Perks"],
+        features: ["Community Access", "Basic Perks", "Video Lessons"],
       },
       {
         name: "Prototype",
