@@ -44,7 +44,7 @@ export default function MembershipPage() {
             <p className="text-xl text-white/80 mb-8">
               Join Build City today and get access to our ecosystem of AI tools, resources, and community support.
             </p>
-            <div className="flex justify-center">
+            <div className="flex justify-center space-x-4">
               <Button size="lg" variant="default" className="bg-white text-black hover:bg-white/90" asChild>
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSebs4h31ju2qrJ2ElC-v_W9eJRMEgK34_pT_NmtfXPAok-BvA/viewform?usp=dialog"
@@ -52,6 +52,15 @@ export default function MembershipPage() {
                   rel="noopener noreferrer"
                 >
                   Interested?
+                </a>
+              </Button>
+              <Button size="lg" className="bg-black text-white border border-white hover:bg-white hover:text-black" asChild>
+                <a
+                  href="https://billing.stripe.com/p/login/dRm00jcnEa294kFfZLabK00"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  My Plan
                 </a>
               </Button>
             </div>
