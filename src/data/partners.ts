@@ -7,13 +7,6 @@ export interface Partner {
 
 export const partners: Partner[] = [
   {
-    name: "Celo",
-    description:
-      "Celo is a carbon-negative blockchain platform bringing accessible and affordable decentralized finance (DeFi) to mobile users worldwide.",
-    image: "/partner_assets/CeloLogo.jpg",
-    link: "https://celo.org",
-  },
-  {
     name: "Venture Miner", 
     description:
       "VentureMiner integrates Web3 and AI technologies to unlock new possibilities for your business.",
@@ -21,11 +14,18 @@ export const partners: Partner[] = [
     link: "https://ventureminer.com",
   },
   {
-    name: "Near Protocol",
+    name: "Windsurf",
     description:
-      "NEAR Protocol is a high-performance, carbon-neutral blockchain platform designed to be fast, secure, and infinitely scalable, enabling developers to build decentralized applications with ease.",
-    image: "/partner_assets/near_logo.png",
-    link: "https://near.org",
+      "Windsurf is an AI-powered IDE that revolutionizes software development with intelligent code completion, automated debugging, and seamless collaboration features.",
+    image: "https://windsurf.com/logo/windsurf-white-symbol.svg",
+    link: "https://codeium.com/windsurf",
+  },
+  {
+    name: "University of Buffalo SUNY",
+    description:
+      "The University at Buffalo is a premier research university and the largest public university in New York, known for excellence in engineering, computer science, and innovation.",
+    image: "https://www.buffalo.edu/content/www/brand/identity/UB-visual-identity-system/jcr:content/par/image_1636653355.img.1360.auto.q65.jpg/1730125612008.jpg",
+    link: "https://www.buffalo.edu",
   },
 ];
 
