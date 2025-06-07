@@ -1,7 +1,6 @@
 import { Check, Minus } from "lucide-react"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
 
-
 interface MembershipComparisonProps {
   tiers: {
     name: string
@@ -13,6 +12,14 @@ interface MembershipComparisonProps {
 export default function MembershipComparison({ tiers }: MembershipComparisonProps) {
   // All unique features across all tiers
   const allFeatures = Array.from(new Set(tiers.flatMap((tier) => tier.features)))
+
+  // Price map based on tier name
+  const pricingMap: Record<string, string> = {
+    "Starter Community": "$49/month",
+    "Prototype": "$299/month",
+    "MVP": "$1899/month",
+    "Scale": "$4499/month",
+  }
 
   // Organize features by category
   const featureCategories = {
@@ -118,8 +125,8 @@ export default function MembershipComparison({ tiers }: MembershipComparisonProp
             <TableCell className="font-bold text-lg py-4 text-white">Pricing</TableCell>
             {tiers.map((tier) => (
               <TableCell key={`${tier.name}-pricing`} className="text-center">
-                <div className="font-semibold text-white/80">Coming Soon</div>
-                <div className="text-sm text-white/60">Pricing TBA</div>
+                <div className="font-semibold text-white/80">Monthly</div>
+                <div className="text-sm text-white/60">{pricingMap[tier.name] || "—"}</div>
               </TableCell>
             ))}
           </TableRow>

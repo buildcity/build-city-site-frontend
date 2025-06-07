@@ -17,12 +17,11 @@ interface MembershipTierProps {
 }
 
 export default function MembershipTierCard({ tier }: MembershipTierProps) {
-  // Function to get all features for this tier, including from previous tiers
   const getAllFeatures = () => {
     const tiers = [
       {
         name: "Starter Community",
-        features: ["Community Access", "Basic Perks"],
+        features: ["Community Access", "Basic Perks", "Video Lessons"],
       },
       {
         name: "Prototype",
@@ -70,6 +69,13 @@ export default function MembershipTierCard({ tier }: MembershipTierProps) {
 
   const allTierFeatures = getAllFeatures()
 
+  const stripeLinks: Record<string, string> = {
+    "Starter Community": "https://buy.stripe.com/fZu6oH87o3DL5oJ3cZabK0b",
+    "Prototype": "https://buy.stripe.com/eVq6oH0EW7U1cRb00NabK0c",
+    "MVP": "https://buy.stripe.com/00waEX9bscaheZj7tfabK0d",
+    "Scale": "https://buy.stripe.com/6oUaEXdrIgqx8AVfZLabK0e",
+  }
+
   return (
     <Card
       className={`border ${
@@ -85,8 +91,9 @@ export default function MembershipTierCard({ tier }: MembershipTierProps) {
         <div className="mt-4">
           <div className="flex items-center justify-center">
             <div className="text-center">
-              <div className="text-2xl font-bold text-white/80">Pricing</div>
-              <div className="text-lg font-semibold text-white/60">Coming Soon</div>
+              <div className="text-3xl font-bold text-white/80">
+                ${tier.monthlyFee}/month
+              </div>
             </div>
           </div>
         </div>
@@ -103,14 +110,10 @@ export default function MembershipTierCard({ tier }: MembershipTierProps) {
           ))}
         </ul>
       </CardContent>
-      <CardFooter className="pt-4">
+      <CardFooter className="pt-4 flex flex-col gap-2">
+        {/* Interested button (Black Background) */}
         <Button
-          variant={tier.buttonVariant}
-          className={`w-full ${
-            tier.buttonVariant === "default"
-              ? "bg-white text-black hover:bg-white/90"
-              : "border-white text-white hover:bg-white/10"
-          }`}
+          className="w-full bg-black text-white border border-white hover:bg-white hover:text-black"
           asChild
         >
           <a
@@ -119,6 +122,20 @@ export default function MembershipTierCard({ tier }: MembershipTierProps) {
             rel="noopener noreferrer"
           >
             Interested?
+          </a>
+        </Button>
+
+        {/* Join button (White Background) */}
+        <Button
+          className="w-full bg-white text-black hover:bg-gray-200"
+          asChild
+        >
+          <a
+            href={stripeLinks[tier.name] || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join
           </a>
         </Button>
       </CardFooter>
