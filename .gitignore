@@ -29,7 +29,7 @@ __pycache__/
 
 # Build artifacts
 build/
-# dist/
+dist/
 *.class
 *.o
 *.so
