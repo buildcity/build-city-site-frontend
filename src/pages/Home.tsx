@@ -5,7 +5,8 @@ import { fadeInClasses } from '../lib/animations';
 const EXTERNAL_LINKS = {
   telegram: "https://t.me/+TKDvfZOEs-E3ODQ5",
   events: "https://lu.ma/user/usr-EI5qHxFqPoGxCJh",
-  newsletter: "https://substack.com/@buildcity"
+  newsletter: "https://substack.com/@buildcity",
+  vibespace: "https://vibespace.so"
 } as const;
 
 const Home = () => {
@@ -23,20 +24,23 @@ const Home = () => {
             <CTAButton 
               href={EXTERNAL_LINKS.telegram} 
               variant="primary"
+              className="bg-blue-600 hover:bg-blue-700"
             >
               Join Community
             </CTAButton>
             <CTAButton 
               href={EXTERNAL_LINKS.events} 
               variant="secondary"
+              className="bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white border-0"
             >
               Join Our Events
             </CTAButton>
             <CTAButton 
-              href={EXTERNAL_LINKS.newsletter} 
-              variant="accent"
+              href={EXTERNAL_LINKS.vibespace} 
+              variant="secondary"
+              className="bg-gray-900 hover:bg-gray-800"
             >
-              Subscribe to our Newsletter
+              Join us on Vibespace
             </CTAButton>
           </div>
         </div>
