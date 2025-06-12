@@ -18,7 +18,8 @@ const Navbar = () => {
     { path: '/labs', label: 'Labs' },
     { path: '/media', label: 'Media' },
     { path: '/partners', label: 'Partners' },
-    { path: '/membership', label: 'Membership' },
+    { path: 'https://substack.com/@buildcity', label: 'Newsletter', external: true },
+    { path: 'https://vibespace.so', label: 'Vibespace.so', external: true },
   ];
 
   return (
@@ -55,15 +56,27 @@ const Navbar = () => {
                   ))}
                 </div>
               </div>
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={componentStyles.navLink}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => 
+                link.external ? (
+                  <a
+                    key={link.path}
+                    href={link.path}
+                    className={componentStyles.navLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={componentStyles.navLink}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
             </div>
           </div>
 
@@ -106,16 +119,29 @@ const Navbar = () => {
               <div className="h-6 w-px bg-gray-600 flex-shrink-0"></div>
               
               {/* Navigation links */}
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors flex-shrink-0 whitespace-nowrap"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => 
+                link.external ? (
+                  <a
+                    key={link.path}
+                    href={link.path}
+                    className="px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors flex-shrink-0 whitespace-nowrap"
+                    onClick={() => setIsOpen(false)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className="px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors flex-shrink-0 whitespace-nowrap"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
             </div>
           </div>
         </div>
