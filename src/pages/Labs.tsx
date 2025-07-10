@@ -3,9 +3,11 @@ import { Button } from '../components/ui/button';
 import { Beaker, Brain, Code, Rocket, Users } from 'lucide-react';
 import { useState } from 'react';
 import ExpandableLabCard, { LabProject } from '../components/ExpandableLabCard';
+import ResearchForm from '../components/ResearchForm';
 
 const Labs = () => {
   const [expandedCardTitle, setExpandedCardTitle] = useState<string | null>(null);
+  const [isResearchFormOpen, setIsResearchFormOpen] = useState(false);
 
   const handleExpand = (title: string) => {
     setExpandedCardTitle(title);
@@ -13,6 +15,14 @@ const Labs = () => {
 
   const handleClose = () => {
     setExpandedCardTitle(null);
+  };
+
+  const openResearchForm = () => {
+    setIsResearchFormOpen(true);
+  };
+
+  const closeResearchForm = () => {
+    setIsResearchFormOpen(false);
   };
 
   // Method to expand colors throughout the component
@@ -100,7 +110,10 @@ const Labs = () => {
             <p className="text-lg sm:text-xl md:text-2xl text-gray-500 mb-6 sm:mb-8 px-4">
               Where innovation meets experimentation.
             </p>
-            <Button className="bg-white hover:bg-gray-200 text-black px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg">
+            <Button 
+              onClick={openResearchForm}
+              className="bg-white hover:bg-gray-200 text-black px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-orange-500/20 border-2 border-transparent hover:border-orange-400/50"
+            >
               Join Our Research
             </Button>
           </div>
@@ -159,6 +172,12 @@ const Labs = () => {
           </div>
         </div>
       </div>
+      
+      {/* Research Form Modal */}
+      <ResearchForm 
+        isOpen={isResearchFormOpen}
+        onClose={closeResearchForm}
+      />
     </PageLayout>
   );
 };

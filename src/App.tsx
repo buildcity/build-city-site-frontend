@@ -10,8 +10,10 @@ const Partners = lazy(() => import('./pages/Partners'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Media = lazy(() => import('./pages/Media'));
-const Membership = lazy(() => import('./pages/Membership')); // 👈 added this line
+const Membership = lazy(() => import('./pages/Membership'));
 const Labs = lazy(() => import('./pages/Labs'));
+const Buffalo = lazy(() => import('./pages/Buffalo'));
+const NYC = lazy(() => import('./pages/NYC'));
 
 function App() {
   return (
@@ -27,8 +29,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/media" element={<Media />} />
-            <Route path="/membership" element={<Membership />} /> {/* 👈 new route */
-            <Route path="/labs" element={<Labs />} />}
+            <Route path="/membership" element={<Membership />} />
+            <Route path="/labs" element={<Labs />} />
+            <Route path="/buffalo" element={<Buffalo />} />
+            <Route path="/nyc" element={<NYC />} />
           </Routes>
         </Suspense>
       </Layout>
