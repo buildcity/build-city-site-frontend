@@ -177,7 +177,7 @@ const Buffalo = () => {
         {/* Partners/Sponsors */}
         <div className="bg-gray-900/50 p-8 rounded-lg">
           <h2 className="text-3xl font-bold text-center mb-12">Partners/Sponsors</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <h3 className="text-xl font-semibold mb-4 text-blue-400">Buffalo Niagara Medical Campus Innovation Center</h3>
               <div className="p-6 rounded-lg flex items-center justify-center min-h-[120px]">
@@ -194,6 +194,16 @@ const Buffalo = () => {
                 <img 
                   src="https://i0.wp.com/gansonstreet.com/wp-content/uploads/2025/06/gansonstreet_logo.png-removebg-preview.png?fit=284%2C136&ssl=1" 
                   alt="Ganson Street Logo"
+                  className="max-h-20 w-auto object-contain"
+                />
+              </div>
+            </div>
+            <div className="text-center p-6">
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">Venture Miner</h3>
+              <div className="p-6 rounded-lg flex items-center justify-center min-h-[120px]">
+                <img 
+                  src="/partner_assets/Venture_Miner_logo.webp" 
+                  alt="Venture Miner Logo"
                   className="max-h-20 w-auto object-contain"
                 />
               </div>

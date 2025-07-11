@@ -22,20 +22,20 @@ const NYC = () => {
       </PageSubtitle>
 
       <div className={`space-y-16 ${fadeInClasses.delay2}`}>
-        {/* Coming Soon Message */}
+        {/* Stay Tuned Message */}
         <div className="text-center">
           <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
             Stay tuned for future activations in New York City. We're working on bringing amazing opportunities to the NYC tech and innovation community.
           </p>
         </div>
 
-        {/* Coming Soon Section */}
+        {/* Stay Tuned Section */}
         <div className="bg-gray-900/50 p-8 rounded-lg text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Coming Soon to NYC
+            Stay tuned for future activations
           </h2>
           <p className="text-xl text-blue-400 mb-8">
-            Stay tuned for future activations
+            New York City opportunities coming soon
           </p>
           <p className="text-lg text-gray-300 mb-12 leading-relaxed">
             While we're building something amazing for New York City, join our community to stay updated on all Build City events and opportunities. Connect with builders, innovators, and creators from around the world.
