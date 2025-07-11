@@ -1,11 +1,13 @@
 import { PageLayout } from '../components/PageLayout';
 import { Button } from '../components/ui/button';
-import { Beaker, Brain, Code, Rocket, Users } from 'lucide-react';
+import { Beaker, Brain, Code, Rocket, Users, GraduationCap } from 'lucide-react';
 import { useState } from 'react';
 import ExpandableLabCard, { LabProject } from '../components/ExpandableLabCard';
+import ResearchForm from '../components/ResearchForm';
 
 const Labs = () => {
   const [expandedCardTitle, setExpandedCardTitle] = useState<string | null>(null);
+  const [isResearchFormOpen, setIsResearchFormOpen] = useState(false);
 
   const handleExpand = (title: string) => {
     setExpandedCardTitle(title);
@@ -13,6 +15,14 @@ const Labs = () => {
 
   const handleClose = () => {
     setExpandedCardTitle(null);
+  };
+
+  const openResearchForm = () => {
+    setIsResearchFormOpen(true);
+  };
+
+  const closeResearchForm = () => {
+    setIsResearchFormOpen(false);
   };
 
   // Method to expand colors throughout the component
@@ -69,6 +79,29 @@ const Labs = () => {
       repository: "https://github.com/buildcity/Brainwave_marketplace",
       timeline: "8-month development with continuous marketplace enhancements",
       team: ["Eddy (CTO)", "Adam Fekkah", "Nikita Kravtchouk", "Tony (CEO)"]
+    },
+    {
+      title: "AllowMe.ai",
+      description: "AI-powered learning platform that bridges education, financial literacy, and blockchain to create a trustless, scalable incentive system for learning and growth.",
+      status: "Active",
+      tech: ["AI", "Blockchain", "Smart Contracts", "Web3", "Machine Learning", "React", "Node.js"],
+      users: 0,
+      icon: <GraduationCap className="h-6 w-6" />,
+      detailedDescription: "Parents and guardians struggle to motivate children to develop valuable skills, manage digital spending, and verify educational progress. Traditional allowances fail to incentivize learning, and parents lack real-time visibility into achievements. AllowMe.ai solves this by creating an AI-powered platform that combines education, financial literacy, and blockchain technology to create a secure, transparent, and motivating learning environment for children.",
+      features: [
+        "AI-Powered Learning & Assessment",
+        "Smart Wallet-Enabled Allowance System",
+        "Secure & Transparent Blockchain Transactions",
+        "Parent-Controlled & AI-Verified Fund Releases",
+        "Custom Quiz Generation",
+        "Learning Gap Identification",
+        "Personalized Study Recommendations",
+        "Achievement Verification System"
+      ],
+      repository: undefined,
+      demo: "https://www.loom.com/share/7ef15d55225c48a08ea07858e6d9ca14?utm_medium=gif",
+      timeline: "Q3 2025",
+      team: ["Juan @ AllowMe.ai", "BuildCity Labs Team"]
     }
   ];
 
@@ -100,8 +133,11 @@ const Labs = () => {
             <p className="text-lg sm:text-xl md:text-2xl text-gray-500 mb-6 sm:mb-8 px-4">
               Where innovation meets experimentation.
             </p>
-            <Button className="bg-white hover:bg-gray-200 text-black px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg">
-              Join Our Research
+            <Button 
+              onClick={openResearchForm}
+              className="bg-white hover:bg-gray-200 text-black px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-orange-500/20 border-2 border-transparent hover:border-orange-400/50"
+            >
+              Get in Touch
             </Button>
           </div>
         </div>
@@ -159,6 +195,12 @@ const Labs = () => {
           </div>
         </div>
       </div>
+      
+      {/* Research Form Modal */}
+      <ResearchForm 
+        isOpen={isResearchFormOpen}
+        onClose={closeResearchForm}
+      />
     </PageLayout>
   );
 };

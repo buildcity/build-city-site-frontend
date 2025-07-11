@@ -7,9 +7,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const cities = [
-    { name: 'New York City', active: true },
-    { name: 'Buffalo', active: true },
-    { name: 'Yonkers', active: true },
+    { name: 'New York City', active: true, path: '/nyc' },
+    { name: 'Buffalo', active: true, path: '/buffalo' },
   ];
 
   const navLinks = [
@@ -44,15 +43,15 @@ const Navbar = () => {
                 </button>
                 <div className="absolute z-10 hidden group-hover:block w-48 bg-gray-900 border border-gray-800">
                   {cities.map((city) => (
-                    <a
+                    <Link
                       key={city.name}
-                      href="#"
+                      to={city.path}
                       className={`block px-4 py-2 text-sm ${
                         city.active ? 'text-gray-200' : 'text-gray-400'
                       } hover:bg-gray-800`}
                     >
                       {city.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -100,9 +99,9 @@ const Navbar = () => {
               <div className="flex items-center space-x-2">
                 <span className="text-xs text-gray-400 uppercase tracking-wide flex-shrink-0">Cities:</span>
                 {cities.map((city) => (
-                  <a
+                  <Link
                     key={city.name}
-                    href="#"
+                    to={city.path}
                     className={`px-3 py-1 text-sm rounded ${
                       city.active 
                         ? 'bg-gray-700 text-gray-200' 
@@ -111,7 +110,7 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                   >
                     {city.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               
