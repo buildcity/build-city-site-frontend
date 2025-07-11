@@ -4,7 +4,32 @@ A modern web3 community platform built with React, TypeScript, and cutting-edge 
 
 BuildCity is a global community of Web3 builders, developers, and innovators creating spaces for collaboration, learning, and growth in cities around the world.
 
-## 🚀 Tech Stack
+## � UPDATE: July 11, 2025
+
+### New Partner Services Added
+We've expanded our ecosystem with cutting-edge technology partners:
+
+- **🌊 Windsurf AI IDE** - Revolutionary AI-powered development environment
+  - Intelligent code completion and automated debugging
+  - Seamless collaboration features for distributed teams
+  - Integration with modern development workflows
+  - Visit: [codeium.com/windsurf](https://codeium.com/windsurf)
+
+- **🏛️ University of Buffalo SUNY** - Academic Excellence Partnership  
+  - Premier research university collaboration
+  - Excellence in engineering and computer science
+  - Innovation-focused educational programs
+  - Visit: [buffalo.edu](https://www.buffalo.edu)
+
+- **⛏️ Venture Miner** - Web3 & AI Integration Platform
+  - Cutting-edge Web3 and AI technology solutions
+  - Business transformation through emerging technologies
+  - Strategic innovation partnerships
+  - Visit: [ventureminer.com](https://ventureminer.com)
+
+These partnerships enhance our community's access to advanced development tools, academic resources, and Web3 innovation platforms.
+
+## �🚀 Tech Stack
 
 ### Core Technologies
 - **React 18** - Modern React with hooks and concurrent features

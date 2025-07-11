@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Send, User, Mail, MessageSquare, Link as LinkIcon } from 'lucide-react';
 import { Button } from './ui/button';
+import emailjs from '@emailjs/browser';
 
 interface ResearchFormProps {
   isOpen: boolean;
@@ -36,13 +37,33 @@ const ResearchForm: React.FC<ResearchFormProps> = ({ isOpen, onClose }) => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    // EmailJS configuration
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    // Template parameters
+    const templateParams = {
+      to_email: 'edward@buildcity.xyz',
+      from_name: formData.name,
+      from_email: formData.email,
+      social_platform: formData.socialPlatform,
+      social_link: formData.socialLink,
+      message: formData.projectMessage,
+      submitted_at: new Date().toLocaleString()
+    };
+    
     try {
-      // Here you would typically send the data to your backend/database
-      // For now, we'll simulate a submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      console.log('Research form submitted:', formData);
-      setSubmitStatus('success');
+      if (!serviceId || !templateId || !publicKey) {
+        console.error('EmailJS configuration missing. Please set up environment variables.');
+        // Fallback: log the form data
+        console.log('Form data would be sent to edward@buildcity.xyz:', templateParams);
+        setSubmitStatus('success');
+      } else {
+        // Send email using EmailJS
+        await emailjs.send(serviceId, templateId, templateParams, publicKey);
+        setSubmitStatus('success');
+      }
       
       // Reset form after successful submission
       setTimeout(() => {
@@ -59,6 +80,12 @@ const ResearchForm: React.FC<ResearchFormProps> = ({ isOpen, onClose }) => {
       
     } catch (error) {
       console.error('Error submitting form:', error);
+      console.error('EmailJS error details:', {
+        serviceId,
+        templateId,
+        publicKey: publicKey ? 'Set' : 'Missing',
+        templateParams
+      });
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -73,7 +100,7 @@ const ResearchForm: React.FC<ResearchFormProps> = ({ isOpen, onClose }) => {
         <div className="p-6">
           {/* Header */}
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-white">Join Our Research</h2>
+            <h2 className="text-2xl font-bold text-white">How Can BuildCity Labs Help?</h2>
             <Button
               variant="ghost"
               size="sm"
@@ -87,7 +114,7 @@ const ResearchForm: React.FC<ResearchFormProps> = ({ isOpen, onClose }) => {
           {/* Success Message */}
           {submitStatus === 'success' && (
             <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-400 text-center">
-              Thank you for joining our research! We'll be in touch soon.
+              Thank you for reaching out! We've forwarded your inquiry to our team and will be in touch soon.
             </div>
           )}
 
@@ -178,7 +205,7 @@ const ResearchForm: React.FC<ResearchFormProps> = ({ isOpen, onClose }) => {
             <div>
               <label htmlFor="projectMessage" className="block text-sm font-medium text-gray-300 mb-2">
                 <MessageSquare className="inline h-4 w-4 mr-2" />
-                Tell us about your project *
+                How can BuildCity Labs help with your project? *
               </label>
               <textarea
                 id="projectMessage"
@@ -188,7 +215,7 @@ const ResearchForm: React.FC<ResearchFormProps> = ({ isOpen, onClose }) => {
                 required
                 rows={4}
                 className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical transition-all duration-300 hover:border-gray-600 hover:bg-gray-750"
-                placeholder="Describe your project, research interests, or how you'd like to contribute to BuildCity Labs..."
+                placeholder="Tell us about your project and how our labs team can assist with research, development, or collaboration..."
               />
             </div>
 
@@ -206,7 +233,7 @@ const ResearchForm: React.FC<ResearchFormProps> = ({ isOpen, onClose }) => {
               ) : (
                 <>
                   <Send className="h-4 w-4 mr-2" />
-                  Submit Application
+                  Send Inquiry
                 </>
               )}
             </Button>
@@ -215,8 +242,8 @@ const ResearchForm: React.FC<ResearchFormProps> = ({ isOpen, onClose }) => {
           {/* Additional Info */}
           <div className="mt-6 p-4 bg-gray-800/50 rounded-lg">
             <p className="text-sm text-gray-400">
-              By submitting this form, you're expressing interest in joining BuildCity Labs research initiatives. 
-              We'll review your application and reach out to discuss potential collaboration opportunities.
+              Your inquiry will be forwarded to <span className="text-blue-400">edward@buildcity.xyz</span> along with all the information you provide. 
+              We'll review your project and discuss how BuildCity Labs can assist with your development needs.
             </p>
           </div>
         </div>

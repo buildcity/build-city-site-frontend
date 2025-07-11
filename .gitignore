@@ -16,6 +16,24 @@ vendor/
 .env
 .env.local
 .env.*.local
+.env.production
+.env.development
+.env.test
+
+# Credential and config files
+config.json
+secrets.json
+credentials.json
+auth.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# API keys and tokens
+**/apikeys.js
+**/secrets.js
+**/tokens.js
 
 # Python
 __pycache__/
@@ -82,3 +100,6 @@ cabal.project.local
 *.bak
 *.swp
 *~
+
+# Local Netlify folder
+.netlify
